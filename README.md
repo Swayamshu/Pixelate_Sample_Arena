@@ -21,7 +21,7 @@ Before installing this arena, you need to download certain modules on which it i
       pip install -e pix-sample-arena
       ~~~
 
-   * To check whether the installation has been successful, you can refer to our guide/cheatsheet to know how to build the gym in your own python script as well as use the utility functions. You can also check this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/Arena_Test.py) which shows the implementation of a few functions in the guide.
+   * To check whether the installation has been successful, you can refer to our guide/cheatsheet to know how to build the gym in your own python script as well as use the utility functions.
 
 In case there are problems with the PyBullet installation, you can refer to this [guide](https://github.com/Robotics-Club-IIT-BHU/Robo-Summer-Camp-20/blob/master/Part1/Subpart%201/README.md).
 
