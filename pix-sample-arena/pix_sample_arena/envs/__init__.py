@@ -1,0 +1,1 @@
+from pix_sample_arena.envs.pix_sample import PixSampleArena
