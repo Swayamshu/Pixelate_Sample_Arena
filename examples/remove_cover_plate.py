@@ -13,6 +13,5 @@ if __name__=="__main__":
         p.stepSimulation()
         if x==10000:
             env.remove_cover_plate(0, 0)
-            env.remove_cover_plate(5, 0)
         x+=1
     time.sleep(100)
