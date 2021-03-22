@@ -10,7 +10,7 @@ if __name__=="__main__":
     print("camera_feed_function--")
     print(env.camera_feed.__doc__)
 
-    print("roll_dice_function--")
+    print("remove_cover_plate_function--")
     print(env.remove_cover_plate.__doc__)
 
     print("remove_car_function--")

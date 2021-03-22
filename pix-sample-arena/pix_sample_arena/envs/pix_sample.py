@@ -128,7 +128,7 @@ class PixSampleArena(gym.Env):
 			[1, 0, 0, 0, 0, 1],
 			[0, 0, 0, 0, 0, 0],
 			[0, 0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0, 0],
+			[0, 3, 0, 0, 0, 0],
 			[0, 0, 0, 0, 0, 0],
 			[2, 0, 0, 0, 0, 0],
 		])
@@ -154,9 +154,12 @@ class PixSampleArena(gym.Env):
 			# 5: 'rsc/triangle/triangle red.urdf',
 			1: 'rsc/circle/circle blue.urdf',
 			2: 'rsc/square/square blue.urdf',
+			3: 'rsc/triangle/triangle blue.urdf',
 		}
 		self.shape_color = shape_colour_dict
 		def get_postion(i, j):
+			if self.shapes[i, j] == 3:
+				return [2.4-i*1,2.48-j*1,0.03]
 			return [2.5-i*1,2.5-j*1,0.03]
 		
 		def get_base_plate_position(i, j):
@@ -175,7 +178,7 @@ class PixSampleArena(gym.Env):
 				p.loadURDF(base_plate_dict[self.arena[i, j]], get_base_plate_position(i, j), p.getQuaternionFromEuler([0, 0, 0]), useFixedBase=1)
 				if self.shapes[i, j] == 0:
 					continue
-				p.loadURDF(shape_colour_dict[self.shapes[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
+				p.loadURDF(shape_colour_dict[self.shapes[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 				if (i, j) in cover_plate_locs:
 					self.cover_plates[i * self.arena_size + j] = p.loadURDF(base_plate_dict[self.arena[i, j]], get_cover_plate_position(i, j), p.getQuaternionFromEuler([0, 0, 0]), useFixedBase=1)
 
