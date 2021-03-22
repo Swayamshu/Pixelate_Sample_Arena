@@ -27,7 +27,7 @@ In case there are problems with the PyBullet installation, you can refer to this
 
 ## Using the Arena  
 
-0. You will have to import the package vision_arena, which will be available only if you've completed step 1 in the Installation Guidelines. The arena can be initialized by using:
+0. You will have to import the package pis_sample_arena, which will be available only if you've completed step 1 in the Installation Guidelines. The arena can be initialized by using:
 
 ~~~python
 env = gym.make("pix_sample_arena-v0")
